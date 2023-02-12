@@ -1,5 +1,5 @@
-CREATE DATABASE assignment
-USE assignment
+CREATE DATABASE assignment;
+USE assignment;
 
 CREATE TABLE employees(
 EmpID int,
@@ -15,42 +15,42 @@ INSERT INTO employees VALUES(2, 'Y', 'Male', 'IT');
 INSERT INTO employees VALUES(3, 'Z', 'Male', 'HR');
 INSERT INTO employees VALUES(4, 'W', 'Female', 'IT');
 
-SELECT * from employees
+SELECT * from employees;
 
 SELECT department,
-sum(case when gender='Male' then 1 else 0 end) as 'Num of male',
-sum(case when gender='Female' then 1 else 0 end) as 'Num of female'
-from employees
-group by department
+SUM(CASE WHEN gender='Male' THEN 1 else 0 END) as 'Num of male',
+SUM(CASE WHEN gender='Female' THEN 1 else 0 END) as 'Num of female'
+FROM employees
+GROUP BY department;
 
 
 
 
 -- Question 2:
-create table salaries(
+CREATE TABLE salaries(
 Name varchar(10),
 Jan int,
 Feb int, 
 Mar int
 );
 
-insert into salaries values('X', 5200, 9093, 3832);
-insert into salaries values('Y', 9023, 8942, 4000);
-insert into salaries values('Z', 9834, 8197, 9903);
-insert into salaries values('W', 3244, 4321, 0293);
+INSERT INTO salaries VALUES('X', 5200, 9093, 3832);
+INSERT INTO salaries VALUES('Y', 9023, 8942, 4000);
+INSERT INTO salaries VALUES('Z', 9834, 8197, 9903);
+INSERT INTO salaries VALUES('W', 3244, 4321, 0293);
 
-select Name,
-case 
-when Jan>Feb and Jan>Mar then Jan
-when Feb>Jan and Feb>Mar then Feb
-when Mar>Feb and Mar>Jan then Mar
-end as Value,
-case 
-when Jan>Feb and Jan>Mar then 'Jan'
-when Feb>Jan and Feb>Mar then 'Feb'
-when Mar>Feb and Mar>Jan then 'Mar'
-end as Month
-from salaries
+SELECT Name,
+CASE 
+WHEN Jan>Feb AND Jan>Mar then Jan
+WHEN Feb>Jan AND Feb>Mar then Feb
+WHEN Mar>Feb AND Mar>Jan then Mar
+END as Value,
+CASE 
+WHEN Jan>Feb AND Jan>Mar then 'Jan'
+WHEN Feb>Jan AND Feb>Mar then 'Feb'
+WHEN Mar>Feb AND Mar>Jan then 'Mar'
+END as Month
+FROM salaries;
 
 
 
@@ -59,7 +59,7 @@ from salaries
 
 -- Question 3
 
-create table test(
+CREATE TABLE test(
 Candidate_ID int,
 Marks int
 );
@@ -80,7 +80,7 @@ ORDER BY Marks DESC;
 
 
 -- Question 4
-create table candidate_Info(
+CREATE TABLE candidate_Info(
 Candidate_ID int,
 Email varchar(32),
 PRIMARY KEY(Candidate_ID)
@@ -92,6 +92,6 @@ INSERT INTO candidate_Info VALUES(34, 'abc@gmail.com');
 INSERT INTO candidate_Info VALUES(21, 'bcf@gmail.com');
 INSERT INTO candidate_Info VALUES(94, 'def@yahoo.com');
 
-select * from candidate_Info;
+SELECT * FROM candidate_Info;
 
-select min(Candidate_ID),Email from candidate_Info group by Email;
+SELECT MIN(Candidate_ID),Email FROM candidate_Info GROUP By Email;
