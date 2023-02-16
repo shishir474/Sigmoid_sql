@@ -35,5 +35,5 @@ Used ORDER BY clause to display table in descending order according to Marks.
 
 Created the table candidate_Info with Candidate_id as primary key and Email as another attribute and inserted values into it.
 In the main query, for first column used aggregated function MIN for finding the minimum Candidate_id in particular group.
-For second column selected Email.
 Used GROUP BY clause for grouping the table according to the Email.
+Once we have the minimum Candidate_id, Run a delete query to delete the ids which are not included in those list of ids. 
