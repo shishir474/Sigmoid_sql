@@ -96,6 +96,13 @@ INSERT INTO candidate_Info VALUES(94, 'def@yahoo.com');
 
 SELECT * FROM candidate_Info;
 
-SELECT MIN(Candidate_ID),Email 
-FROM candidate_Info 
-GROUP By Email;
+DELETE FROM candidate_Info 
+WHERE Candidate_ID NOT IN (
+  SELECT mcid from(
+    SELECT MIN(Candidate_ID) mcid
+    FROM candidate_Info 
+    GROUP By Email
+    ) a
+)
+
+SELECT * FROM candidate_Info
