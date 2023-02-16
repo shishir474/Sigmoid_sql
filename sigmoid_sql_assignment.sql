@@ -21,7 +21,8 @@ SELECT department,
 SUM(CASE WHEN gender='Male' THEN 1 else 0 END) as 'Num of male',
 SUM(CASE WHEN gender='Female' THEN 1 else 0 END) as 'Num of female'
 FROM employees
-GROUP BY department;
+GROUP BY department
+ORDER BY department;
 
 
 
@@ -61,7 +62,8 @@ FROM salaries;
 
 CREATE TABLE test(
 Candidate_ID int,
-Marks int
+Marks int,
+PRIMARY_KEY(Candidate_ID)
 );
 
 INSERT INTO test VALUES(1, 98);
@@ -94,4 +96,6 @@ INSERT INTO candidate_Info VALUES(94, 'def@yahoo.com');
 
 SELECT * FROM candidate_Info;
 
-SELECT MIN(Candidate_ID),Email FROM candidate_Info GROUP By Email;
+SELECT MIN(Candidate_ID),Email 
+FROM candidate_Info 
+GROUP By Email;
