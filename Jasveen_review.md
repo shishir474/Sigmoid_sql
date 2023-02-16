@@ -1,4 +1,5 @@
 **Question 1**
+
 Created the database using CREATE DATABASE sql_q1 and used it using USE sql_q1.
 Created the table employees with emp_id as primary key and inserted values into it.
 In the main query, for first column selected Department column.
@@ -8,6 +9,7 @@ Used GROUP BY clause for grouping the table according to the Department.
 Used ORDER BY clause to display table in ascending order according to Department.
 
 **Question 2**
+
 Created the database using CREATE DATABASE sql_q2 and used it using USE sql_q2.
 Created the table employees with Name, Jan, Feb and Mar as attributes and inserted values into it.
 In the main query, for first column selected Name column.
@@ -15,6 +17,7 @@ For second column used CASE statement for finding the maximum salary between Jan
 For third column used CASE statement for finding the month of maximum salary between Jan, Feb and Mar as Month.
 
 **Question 3**
+
 Created the database using CREATE DATABASE sql_q3 and used it using USE sql_q3.
 Created the table test with Candidate_id as primary key and Marks as another attribute and inserted values into it.
 In the main query, for first column selected Marks column.
@@ -24,6 +27,7 @@ Used GROUP BY clause for grouping the table according to the Marks.
 Used ORDER BY clause to display table in descending order according to Marks.
 
 **Question 4**
+
 Created the database using CREATE DATABASE sql_q4 and used it using USE sql_q4.
 Created the table record with Candidate_id as primary key and Email as another attribute and inserted values into it.
 In the main query, for first column used aggregated function MIN for finding the minimum Candidate_id in particular group.
