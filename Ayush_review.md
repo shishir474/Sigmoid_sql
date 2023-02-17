@@ -29,3 +29,4 @@ Created the table detail with candidate_id as primary key and email as another a
 In the subquery calculated Minimum candidate_id from detail table grouping the table according to email using GROUP BY clause.
 Selected all columns from detail table WHERE candidate_id is equal to the result of above subquery.
 Used ORDER BY clause to display table in descending order according to Candidate_id.
+Once we have the minimum Candidate_id, Run a delete query to delete the ids which are not included in those list of ids.
