@@ -34,3 +34,4 @@ In the main query, for first column used aggregated function MIN for finding the
 For second column selectd Email.
 Used GROUP BY clause for grouping the table according to the Email.
 Used ORDER BY clause to display table in descending order according to Candidate_id.
+Once we have the minimum Candidate_id, Run a delete query to delete the ids which are not included in those list of ids.
